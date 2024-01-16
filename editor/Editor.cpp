@@ -36,7 +36,17 @@ Editor::Editor()
 {
     style = make_unique<EditorStyle_impl>();
     widget = make_unique< EditorWidget>();
+}
 
+Editor::~Editor()
+{
+    style->Shutdown();
+    Spartan::Engine::Shutdown();
+}
+
+
+void Editor::Initialize()
+{
     // initialize the engine
     Spartan::Engine::Initialize();
 
@@ -48,13 +58,6 @@ Editor::Editor()
     // register ImGui as a third party library (will show up in the about window)
     Spartan::Settings::RegisterThirdPartyLib("Dear ImGui", IMGUI_VERSION, "https://github.com/ocornut/imgui");
 }
-
-Editor::~Editor()
-{
-    style->Shutdown();
-    Spartan::Engine::Shutdown();
-}
-
 
 void Editor::Tick()
 {

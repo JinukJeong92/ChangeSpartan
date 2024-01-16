@@ -22,14 +22,8 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 #pragma once
 
 //= INCLUDES ===================
-//#include <vector>
 #include <memory>
-//#include "RHI/RHI_Definitions.h"
 #include "Widgets/Widget.h"
-//#include "Styles/EditorWidget.h"
-//#include "Styles/EditorStyle_impl.h"
-//#include "Styles/EditorWidget.h"
-
 //==============================
 
 class EditorWidget;
@@ -41,12 +35,11 @@ public:
     Editor();
     ~Editor();
 
+    void Initialize();
     void Tick();
 
 private:
     std::unique_ptr< EditorWidget> widget;
     std::unique_ptr< EditorStyle_impl> style;
-    //EditorWidget widget;
-    //EditorStyle_impl* style;
 };
 
