@@ -64,7 +64,7 @@ private:
 class Console : public Widget
 {
 public:
-    Console(Editor* editor);
+    Console(EditorWidget* editor);
     ~Console();
 
     void OnTickVisible() override;

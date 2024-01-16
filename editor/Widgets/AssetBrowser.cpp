@@ -62,7 +62,7 @@ namespace
         }
     }
     
-    static void mesh_import_dialog(Editor* editor)
+    static void mesh_import_dialog(EditorWidget* editor)
     {
         if (mesh_import_dialog_is_visible)
         {
@@ -118,7 +118,7 @@ namespace
     }
 }
 
-AssetBrowser::AssetBrowser(Editor* editor) : Widget(editor)
+AssetBrowser::AssetBrowser(EditorWidget* editor) : Widget(editor)
 {
     m_title             = "Assets";
     m_file_dialog_view  = make_unique<FileDialog>(false, FileDialog_Type_Browser,       FileDialog_Op_Load, FileDialog_Filter_All);

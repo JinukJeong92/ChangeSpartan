@@ -55,7 +55,7 @@ namespace
     bool sort_time_blocks = false;
 }
 
-Profiler::Profiler(Editor* editor) : Widget(editor)
+Profiler::Profiler(EditorWidget* editor) : Widget(editor)
 {
     m_flags        |= ImGuiWindowFlags_AlwaysAutoResize | ImGuiWindowFlags_NoScrollbar;
     m_title        = "Profiler";

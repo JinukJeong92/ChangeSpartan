@@ -28,7 +28,7 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 class ResourceViewer : public Widget
 {
 public:
-    ResourceViewer(Editor* editor);
+    ResourceViewer(EditorWidget* editor);
 
     void OnTickVisible() override;
 private:

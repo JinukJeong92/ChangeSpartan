@@ -61,7 +61,7 @@ struct Timings
 class Profiler : public Widget
 {
 public:
-    Profiler(Editor* editor);
+    Profiler(EditorWidget* editor);
 
     void OnTickVisible() override;
     void OnVisible() override;

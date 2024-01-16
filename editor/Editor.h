@@ -22,11 +22,18 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 #pragma once
 
 //= INCLUDES ===================
-#include <vector>
+//#include <vector>
 #include <memory>
-#include "RHI/RHI_Definitions.h"
+//#include "RHI/RHI_Definitions.h"
 #include "Widgets/Widget.h"
+//#include "Styles/EditorWidget.h"
+//#include "Styles/EditorStyle_impl.h"
+//#include "Styles/EditorWidget.h"
+
 //==============================
+
+class EditorWidget;
+class EditorStyle_impl;
 
 class Editor
 {
@@ -36,23 +43,10 @@ public:
 
     void Tick();
 
-    template<typename T>
-    T* GetWidget()
-    {
-        for (const auto& widget : m_widgets)
-        {
-            if (T* widget_t = dynamic_cast<T*>(widget.get()))
-            {
-                return widget_t;
-            }
-        }
-
-        return nullptr;
-    }
-
 private:
-    void BeginWindow();
-
-    bool m_editor_begun = false;
-    std::vector<std::shared_ptr<Widget>> m_widgets;
+    std::unique_ptr< EditorWidget> widget;
+    std::unique_ptr< EditorStyle_impl> style;
+    //EditorWidget widget;
+    //EditorStyle_impl* style;
 };
+

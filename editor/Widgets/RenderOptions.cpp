@@ -178,7 +178,7 @@ namespace
     };
 }
 
-RenderOptions::RenderOptions(Editor* editor) : Widget(editor)
+RenderOptions::RenderOptions(EditorWidget* editor) : Widget(editor)
 {
     m_title    = "Renderer Options";
     m_flags    |= ImGuiWindowFlags_AlwaysAutoResize;

@@ -36,7 +36,7 @@ namespace
     static array<Progress*, 5> progresses;
 }
 
-ProgressDialog::ProgressDialog(Editor* editor) : Widget(editor)
+ProgressDialog::ProgressDialog(EditorWidget* editor) : Widget(editor)
 {
     m_title         = "Hold on...";
     m_visible       = false;

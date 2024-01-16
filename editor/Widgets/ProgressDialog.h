@@ -28,7 +28,7 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 class ProgressDialog : public Widget
 {
 public:
-    ProgressDialog(Editor* editor);
+    ProgressDialog(EditorWidget* editor);
     ~ProgressDialog() = default;
 
     void OnTick() override;

@@ -49,7 +49,7 @@ namespace Spartan
 class Properties : public Widget
 {
 public:
-    Properties(Editor* editor);
+    Properties(EditorWidget* editor);
 
     void OnTickVisible() override;
 

@@ -31,7 +31,7 @@ class FileDialog;
 class AssetBrowser : public Widget
 {
 public:
-    AssetBrowser(Editor* editor);
+    AssetBrowser(EditorWidget* editor);
 
     void OnTickVisible() override;
     void ShowMeshImportDialog(const std::string& file_path);

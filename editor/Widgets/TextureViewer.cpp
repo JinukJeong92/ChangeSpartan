@@ -57,7 +57,7 @@ namespace
     vector<RHI_Texture*> render_targets;
 }
 
-TextureViewer::TextureViewer(Editor* editor) : Widget(editor)
+TextureViewer::TextureViewer(EditorWidget* editor) : Widget(editor)
 {
     m_title    = "Texture Viewer";
     m_visible  = false;

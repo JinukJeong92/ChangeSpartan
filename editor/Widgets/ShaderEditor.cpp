@@ -40,7 +40,7 @@ namespace
     const float k_horizontal_split_offset_from_bottom = 81.0f;
 }
 
-ShaderEditor::ShaderEditor(Editor* editor) : Widget(editor)
+ShaderEditor::ShaderEditor(EditorWidget* editor) : Widget(editor)
 {
     m_title         = "Shader Editor";
     m_flags        |= ImGuiWindowFlags_NoScrollbar;

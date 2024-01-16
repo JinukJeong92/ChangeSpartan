@@ -21,14 +21,14 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 //= INCLUDES ==============================
 #include "Widget.h"
-#include "../Editor.h"
+#include "../Styles/EditorWidget.h"
 #include "../ImGui/Source/imgui_internal.h"
 #include "Profiling/Profiler.h"
 #include "Display/Display.h"
 #include "Viewport.h"
 //=========================================
 
-Widget::Widget(Editor* editor)
+Widget::Widget(EditorWidget* editor)
 {
     m_editor = editor;
     m_window = nullptr;

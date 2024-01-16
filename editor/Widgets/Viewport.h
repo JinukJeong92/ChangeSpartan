@@ -29,7 +29,7 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 class Viewport : public Widget
 {
 public:
-    Viewport(Editor* editor);
+    Viewport(EditorWidget* editor);
 
     void OnTickVisible() override;
 

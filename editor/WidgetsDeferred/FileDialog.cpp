@@ -67,7 +67,7 @@ void FileDialog::SetOperation(const FileDialog_Operation operation)
     m_title     = OPERATION_NAME;
 }
 
-bool FileDialog::Show(bool* is_visible, Editor* editor, string* directory /*= nullptr*/, string* file_path /*= nullptr*/)
+bool FileDialog::Show(bool* is_visible, EditorWidget* editor, string* directory /*= nullptr*/, string* file_path /*= nullptr*/)
 {
     if (!(*is_visible))
     {
@@ -120,7 +120,7 @@ bool FileDialog::Show(bool* is_visible, Editor* editor, string* directory /*= nu
     return m_selection_made;
 }
 
-void FileDialog::ShowTop(bool* is_visible, Editor* editor)
+void FileDialog::ShowTop(bool* is_visible, EditorWidget* editor)
 {
     if (m_is_window)
     {

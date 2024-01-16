@@ -34,7 +34,7 @@ class Toolbar;
 class MenuBar : public Widget
 {
 public:
-    MenuBar(Editor* editor);
+    MenuBar(EditorWidget* editor);
 
     void OnTick() override;
     void ShowWorldSaveDialog();
@@ -50,5 +50,5 @@ private:
 
     std::unique_ptr<Toolbar> m_tool_bar;
     std::unique_ptr<FileDialog> m_file_dialog;
-    Editor* m_editor = nullptr;
+    EditorWidget* m_editor = nullptr;
 };

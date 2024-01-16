@@ -37,14 +37,15 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 #include "Input/Input.h"
 #include "Display/Display.h"
 #include "Source/imgui_internal.h"
-#include "../Editor.h"
+//#include "../Editor.h"
+#include "../Styles/EditorWidget.h"
 #include "../WidgetsDeferred/IconLoader.h"
 //========================================
 
 class EditorHelper
 {
 public:
-    static void Initialize(Editor* editor_)
+    static void Initialize(EditorWidget* editor_)
     {
         editor = editor_;
     }
@@ -79,7 +80,7 @@ public:
         });
     }
 
-    static Editor* editor;
+    static EditorWidget* editor;
 };
 
 namespace ImGuiSp

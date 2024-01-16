@@ -31,7 +31,7 @@ enum class IconType;
 class Toolbar : public Widget
 {
 public:
-    Toolbar(Editor* editor);
+    Toolbar(EditorWidget* editor);
 
     void OnTick() override;
 

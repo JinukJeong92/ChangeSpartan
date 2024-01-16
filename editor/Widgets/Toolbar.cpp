@@ -56,7 +56,7 @@ namespace
     }
 }
 
-Toolbar::Toolbar(Editor* editor) : Widget(editor)
+Toolbar::Toolbar(EditorWidget* editor) : Widget(editor)
 {
     m_title     = "Toolbar";
     m_is_window = false;

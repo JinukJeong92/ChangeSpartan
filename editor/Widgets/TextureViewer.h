@@ -42,7 +42,7 @@ enum TextureViewOptions
 class TextureViewer : public Widget
 {
 public:
-    TextureViewer(Editor* editor);
+    TextureViewer(EditorWidget* editor);
 
     void OnTick() override;
     void OnVisible() override;

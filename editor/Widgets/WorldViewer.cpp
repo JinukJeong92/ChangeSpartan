@@ -47,7 +47,7 @@ namespace
     weak_ptr <Spartan::Entity> entity_hovered;
     ImGuiSp::DragDropPayload g_payload;
 
-    void load_default_world_prompt(Editor* editor)
+    void load_default_world_prompt(EditorWidget* editor)
     {
         // Load default world window
         static bool is_default_world_window_visible = true;
@@ -126,7 +126,7 @@ namespace
     }
 }
 
-WorldViewer::WorldViewer(Editor* editor) : Widget(editor)
+WorldViewer::WorldViewer(EditorWidget* editor) : Widget(editor)
 {
     m_title = "World";
     m_flags |= ImGuiWindowFlags_HorizontalScrollbar;

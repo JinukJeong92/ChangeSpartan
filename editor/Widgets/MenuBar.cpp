@@ -98,7 +98,7 @@ namespace
         return result;
     }
 
-    void window_contributors(Editor* editor)
+    void window_contributors(EditorWidget* editor)
     {
         if (!show_contributors_window)
             return;
@@ -172,7 +172,7 @@ namespace
         ImGui::End();
     }
 
-    void window_about(Editor* editor)
+    void window_about(EditorWidget* editor)
     {
         if (!show_about_window)
             return;
@@ -243,7 +243,7 @@ namespace
         ImGui::End();
     }
 
-    void window_shortcuts(Editor* editor)
+    void window_shortcuts(EditorWidget* editor)
     {
         if (!show_shortcuts_window)
             return;
@@ -294,7 +294,7 @@ namespace
     }
 
     template <class T>
-    void widget_menu_item(Editor* editor)
+    void widget_menu_item(EditorWidget* editor)
     {
         T* widget = editor->GetWidget<T>();
 
@@ -307,7 +307,7 @@ namespace
     }
 }
 
-MenuBar::MenuBar(Editor *editor) : Widget(editor)
+MenuBar::MenuBar(EditorWidget *editor) : Widget(editor)
 {
     m_title        = "MenuBar";
     m_is_window    = false;

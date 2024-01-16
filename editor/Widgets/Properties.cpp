@@ -134,7 +134,7 @@ namespace
     }
 }
 
-Properties::Properties(Editor* editor) : Widget(editor)
+Properties::Properties(EditorWidget* editor) : Widget(editor)
 {
     m_title          = "Properties";
     m_size_initial.x = 500; // min width

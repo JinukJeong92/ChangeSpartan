@@ -40,7 +40,7 @@ namespace
     }
 }
 
-Console::Console(Editor* editor) : Widget(editor)
+Console::Console(EditorWidget* editor) : Widget(editor)
 {
     m_title = "Console";
 

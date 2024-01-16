@@ -36,7 +36,7 @@ namespace Spartan
 class ShaderEditor : public Widget
 {
 public:
-    ShaderEditor(Editor* editor);
+    ShaderEditor(EditorWidget* editor);
 
     void OnTickVisible() override;
 

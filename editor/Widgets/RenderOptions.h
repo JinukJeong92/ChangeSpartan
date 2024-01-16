@@ -28,7 +28,7 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 class RenderOptions : public Widget
 {
 public:
-    RenderOptions(Editor* editor);
+    RenderOptions(EditorWidget* editor);
 
     void OnVisible() override;
     void OnTickVisible() override;

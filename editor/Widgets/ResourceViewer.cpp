@@ -31,7 +31,7 @@ using namespace std;
 using namespace Spartan;
 //=======================
 
-ResourceViewer::ResourceViewer(Editor* editor) : Widget(editor)
+ResourceViewer::ResourceViewer(EditorWidget* editor) : Widget(editor)
 {
     m_title        = "Resource Viewer";
     m_size_initial = ImVec2(1366, 768);

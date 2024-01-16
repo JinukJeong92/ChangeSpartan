@@ -29,7 +29,7 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 //==================================
 struct ImGuiWindow;
-class Editor;
+class EditorWidget;
 namespace Spartan { class Context; }
 //==================================
 
@@ -38,7 +38,7 @@ constexpr float k_widget_default_property = -1.0f;
 class Widget
 {
 public:
-    Widget(Editor* editor);
+    Widget(EditorWidget* editor);
     virtual ~Widget() = default;
 
     void Tick();
@@ -87,7 +87,7 @@ protected:
     ImGuiWindow* m_window = nullptr;
 
     // Dependencies
-    Editor* m_editor = nullptr;
+    EditorWidget* m_editor = nullptr;
 
 private:
     uint8_t m_var_push_count = 0;

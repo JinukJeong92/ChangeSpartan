@@ -21,7 +21,7 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 //= INCLUDES ==============
 #include "ImGuiExtension.h"
-#include "../Editor.h"
+#include "../Styles/EditorWidget.h"
 //=========================
 
-Editor* EditorHelper::editor = nullptr;
+EditorWidget* EditorHelper::editor = nullptr;

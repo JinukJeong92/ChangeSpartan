@@ -35,7 +35,7 @@ using namespace Spartan;
 using namespace Math;
 //======================
 
-Viewport::Viewport(Editor* editor) : Widget(editor)
+Viewport::Viewport(EditorWidget* editor) : Widget(editor)
 {
     m_title         = "Viewport";
     m_size_initial  = Vector2(400, 250);
