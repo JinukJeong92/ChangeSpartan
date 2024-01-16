@@ -75,7 +75,7 @@ Toolbar::Toolbar(Editor* editor) : Widget(editor)
     m_widgets[IconType::Component_Options]      = m_editor->GetWidget<RenderOptions>();
     m_widgets[IconType::Directory_File_Texture] = m_editor->GetWidget<TextureViewer>();
 
-    Spartan::Engine::RemoveFlag(Spartan::EngineMode::Game);
+    Spartan::EngineFlags::RemoveFlag(Spartan::EngineMode::Game);
 }
 
 void Toolbar::OnTick()
@@ -83,7 +83,7 @@ void Toolbar::OnTick()
     // play
     toolbar_button(
         IconType::Button_Play, "Play",
-        []() { return Spartan::Engine::IsFlagSet(Spartan::EngineMode::Game); },
+        []() { return Spartan::EngineFlags::IsFlagSet(Spartan::EngineMode::Game); },
         []() { return Spartan::Engine::ToggleFlag(Spartan::EngineMode::Game); }
     );
 

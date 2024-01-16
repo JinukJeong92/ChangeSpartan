@@ -109,7 +109,7 @@ namespace Spartan
     {
         #if defined(_MSC_VER)
         // Don't play audio if the engine is not in game mode
-        if (!Engine::IsFlagSet(EngineMode::Game))
+        if (!EngineFlags::IsFlagSet(EngineMode::Game))
             return;
 
         SP_PROFILE_FUNCTION();

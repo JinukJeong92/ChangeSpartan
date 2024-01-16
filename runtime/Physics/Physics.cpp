@@ -143,8 +143,8 @@ namespace Spartan
     {
         SP_PROFILE_FUNCTION();
 
-        bool is_in_editor_mode = !Engine::IsFlagSet(EngineMode::Game);
-        bool physics_enabled   = Engine::IsFlagSet(EngineMode::Physics);
+        bool is_in_editor_mode = !EngineFlags::IsFlagSet(EngineMode::Game);
+        bool physics_enabled   = EngineFlags::IsFlagSet(EngineMode::Physics);
         bool debug_draw        = Renderer::GetOption<bool>(Renderer_Option::Debug_Physics);
         bool simulate_physics  = physics_enabled && !is_in_editor_mode;
 

@@ -477,7 +477,7 @@ namespace Spartan
             // when in game mode and controlling a physics based camera ignore the pitch
             // this is so the view direction (forward) is never pointing towards the ground or sky
             // cause movement to come a stop
-            if (m_physics_body_to_control && Engine::IsFlagSet(EngineMode::Game))
+            if (m_physics_body_to_control && EngineFlags::IsFlagSet(EngineMode::Game))
             {
                 movement_direction.y = 0.0f;
             }
@@ -523,7 +523,7 @@ namespace Spartan
             {
                 if (m_physics_body_to_control)
                 {
-                    if (Engine::IsFlagSet(EngineMode::Game))
+                    if (EngineFlags::IsFlagSet(EngineMode::Game))
                     {
                         const bool is_grounded   = m_physics_body_to_control->RayTraceIsGrounded();
                         const bool is_underwater = GetEntity()->GetPosition().y <= 0.0f;

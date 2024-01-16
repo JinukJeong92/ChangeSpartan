@@ -193,9 +193,9 @@ namespace Spartan
         // tick entities
         {
             // detect game toggling
-            const bool started   =  Engine::IsFlagSet(EngineMode::Game) &&  m_was_in_editor_mode;
-            const bool stopped   = !Engine::IsFlagSet(EngineMode::Game) && !m_was_in_editor_mode;
-            m_was_in_editor_mode = !Engine::IsFlagSet(EngineMode::Game);
+            const bool started   =  EngineFlags::IsFlagSet(EngineMode::Game) &&  m_was_in_editor_mode;
+            const bool stopped   = !EngineFlags::IsFlagSet(EngineMode::Game) && !m_was_in_editor_mode;
+            m_was_in_editor_mode = !EngineFlags::IsFlagSet(EngineMode::Game);
 
             // start
             if (started)
@@ -544,7 +544,7 @@ namespace Spartan
         }
 
         // start simulating (for the music to play)
-        Engine::AddFlag(EngineMode::Game);
+        EngineFlags::AddFlag(EngineMode::Game);
     }
 
     void World::CreateDefaultWorldCar()
@@ -798,7 +798,7 @@ namespace Spartan
             World::RemoveEntity(entity_car->GetDescendantByName("RR_Caliper_BrakeCaliper_0"));
         }
 
-        Engine::AddFlag(EngineMode::Game);
+        EngineFlags::AddFlag(EngineMode::Game);
     }
 
     void World::CreateDefaultWorldForest()
@@ -1093,7 +1093,7 @@ namespace Spartan
                 World::Resolve();
 
                 // start simulating (for the music to play)
-                Engine::AddFlag(EngineMode::Game);
+                EngineFlags::AddFlag(EngineMode::Game);
             });
         }
     }
@@ -1187,7 +1187,7 @@ namespace Spartan
         }
 
         // start simulating (for the physics and the music to work)
-        Engine::AddFlag(EngineMode::Game);
+        EngineFlags::AddFlag(EngineMode::Game);
     }
 
     void World::CreateDefaultWorldDoomE1M1()
@@ -1219,7 +1219,7 @@ namespace Spartan
         }
 
         // start simulating (for the physics and the music to work)
-        Engine::AddFlag(EngineMode::Game);
+        EngineFlags::AddFlag(EngineMode::Game);
     }
 
     void World::TickDefaultWorlds()

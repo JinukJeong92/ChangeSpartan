@@ -64,6 +64,10 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 #include "FileSystem.h"
 #include "Stopwatch.h"
 
+// Flags
+#include "../Server/Flags/EngineFlags.h"
+
+
 // Logging
 #include "../Logging/Log.h"
 

@@ -411,7 +411,7 @@ namespace Spartan
         Pass_Frame(cmd_current);
 
         // blit to back buffer when in full screen
-        if (!Engine::IsFlagSet(EngineMode::Editor))
+        if (!EngineFlags::IsFlagSet(EngineMode::Editor))
         {
             cmd_current->BeginMarker("copy_to_back_buffer");
             cmd_current->Blit(GetRenderTarget(Renderer_RenderTexture::frame_output).get(), swap_chain.get());
@@ -428,7 +428,7 @@ namespace Spartan
 
     void Renderer::PostTick()
     {
-        if (!Engine::IsFlagSet(EngineMode::Editor))
+        if (!EngineFlags::IsFlagSet(EngineMode::Editor))
         {
             Present();
         }
