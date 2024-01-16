@@ -37,7 +37,6 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 #include "Input/Input.h"
 #include "Display/Display.h"
 #include "Source/imgui_internal.h"
-//#include "../Editor.h"
 #include "../Styles/EditorWidget.h"
 #include "../WidgetsDeferred/IconLoader.h"
 //========================================

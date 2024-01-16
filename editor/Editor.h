@@ -35,8 +35,10 @@ public:
     Editor();
     ~Editor();
 
-    void Initialize();
     void Tick();
+
+private:
+    void Initialize();
 
 private:
     std::unique_ptr< EditorWidget> widget;

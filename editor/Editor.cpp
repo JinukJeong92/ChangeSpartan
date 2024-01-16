@@ -35,7 +35,7 @@ using namespace std;
 Editor::Editor()
 {
     style = make_unique<EditorStyle_impl>();
-    widget = make_unique< EditorWidget>();
+    widget = make_unique<EditorWidget>();
 }
 
 Editor::~Editor()
@@ -47,9 +47,6 @@ Editor::~Editor()
 
 void Editor::Initialize()
 {
-    // initialize the engine
-    Spartan::Engine::Initialize();
-
     // initialize Editor Gui
     style->Initialize();
     widget->Initialize();
@@ -61,6 +58,11 @@ void Editor::Initialize()
 
 void Editor::Tick()
 {
+    // initialize the engine
+    Spartan::Engine::Initialize();
+
+    Initialize();
+
     // this is the main editor/engine loop
     while (!Spartan::Window::WantsToClose())
     {
