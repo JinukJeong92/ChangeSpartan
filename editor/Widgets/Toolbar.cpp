@@ -84,7 +84,7 @@ void Toolbar::OnTick()
     toolbar_button(
         IconType::Button_Play, "Play",
         []() { return Spartan::EngineFlags::IsFlagSet(Spartan::EngineMode::Game); },
-        []() { return Spartan::Engine::ToggleFlag(Spartan::EngineMode::Game); }
+        []() { return Spartan::EngineFlags::ToggleFlag(Spartan::EngineMode::Game); }
     );
 
     //  widgets as buttons 

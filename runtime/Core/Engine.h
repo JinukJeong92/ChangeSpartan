@@ -23,6 +23,7 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 //= INCLUDES ===========
 #include "Definitions.h"
+#include "../runtime/Server/Flags/EngineFlags.h"
 //======================
 
 namespace Spartan
